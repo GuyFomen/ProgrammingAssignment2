@@ -1,7 +1,7 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## this function invert amtrix and cache it inverse
+## this function invert matrix and cache it inverse
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -25,8 +25,8 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
   m <- x$getsolve()
   if(!is.null(m)) {
-    message("getting cached data")
-    return(m)
+    message("getting cached data") 
+    return(m)# return the inverse if it was cached
   }
   data <- x$get()
   m <- solve(data)
